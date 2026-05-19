@@ -1,0 +1,12 @@
+{
+  "repo": "obesity-risk-prediction-ml",
+  "title": "Obesity Risk Prediction ML",
+  "category": "Medical-AI-Projects",
+  "description": "A machine learning notebook for obesity classification using train/test CSV files and multiple classical models.",
+  "topics": [
+    "machine-learning",
+    "healthcare",
+    "classification",
+    "scikit-learn"
+  ]
+}
