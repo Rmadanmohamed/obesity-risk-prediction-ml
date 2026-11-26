@@ -1,5 +1,7 @@
 # Obesity Risk Prediction ML
 
+> **Phase 2 repair branch:** Set `OBESITY_DATA_DIR` to the folder containing the original `train.csv` and `test.csv`; set `OBESITY_TARGET_COLUMN` if the unique train-only target cannot be inferred. The repaired notebook splits labeled raw features before fitting imputation, encoding and scaling; it excludes identifiers, applies identical transformations to validation and inference, and trains a deterministic random forest baseline. No original dataset or metrics were verified. This is an engineering baseline, not clinical validation. The historical description below documents the pre-repair baseline; use the instructions above for the repaired notebook. Full execution and dependency resolution are pending.
+
 ## Overview and problem statement
 
 Explore preprocessing of structured health and lifestyle records for obesity risk classification. This repository is an incomplete modeling experiment rather than a trained prediction system.
