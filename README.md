@@ -2,7 +2,7 @@
 
 ## Overview and problem statement
 
-Explore preprocessing of structured health and lifestyle records for obesity risk classification. This repository is an incomplete modeling experiment rather than a trained prediction system.
+Explore preprocessing of structured health and lifestyle records for obesity risk classification. This notebook now defines a logistic regression experiment; no trained model artifact is supplied.
 
 ## Technology stack and prerequisites
 
@@ -18,11 +18,11 @@ Explore preprocessing of structured health and lifestyle records for obesity ris
 
 ## Dataset and preprocessing
 
-`train.csv` and `test.csv` under `/content/`; neither data source nor license is specified. The notebook explores columns and encodes categorical values; it scales `Age` and `Weight`. The target and split are not established in executable code.
+`train.csv` and `test.csv` under `/content/`; neither data source nor license is specified. The target must be the single non-ID column present only in training. A stratified 80/20 split precedes fitting median imputation, scaling and categorical encoding.
 
 ## Model and workflow
 
-The notebook imports logistic regression, random forest, gradient boosting, decision tree, KNN, Gaussian naive Bayes and SVC but does not fit them.
+The repair branch fits logistic regression in a preprocessing pipeline; other imported classifiers are not fitted.
 
 ## Installation and execution
 
@@ -50,7 +50,7 @@ None are required by the reviewed notebook. Dataset paths are configured in cell
 
 ## Usage and evaluation
 
-Run the data exploration and preprocessing cells individually. The final split refers to undefined `x` and `y`; the test preprocessing concatenates training numerical data and independently encodes categories. A complete end-to-end run is not currently possible without correcting those issues.
+Run cells in order after supplying matching train/test schemas. The notebook prints a holdout classification report and constructs an external prediction table. Actual data execution remains unverified.
 
 ## Testing and validation
 
@@ -62,10 +62,14 @@ No standalone screenshot or verified live demo is included in the repository. An
 
 ## Limitations and next steps
 
-No trained model or metric output is provided. Document the schema, fix train/test preprocessing and split, and validate models before considering inference. Not a substitute for professional medical diagnosis.
+No trained model or metric output is provided. Verify the dataset schema and run independent validation before considering inference. Not a substitute for professional medical diagnosis.
 
 ## Author
 
 **Ramadan Mohamed Hassan** — AI Engineer | AI Researcher | AI Automation | LLM & RAG Systems | Machine Learning
 
 [Portfolio](https://ramadan-ai-portfolio.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/ramadan-mohamed-89085a366/) · [GitHub](https://github.com/Rmadanmohamed) · [Email](mailto:ramadanmohameddd3@gmail.com)
+
+## Repair-branch validation status
+
+The changed notebook was statically inspected and saved on a review branch. Original datasets are unavailable to this audit, and no notebook training, test scores, dependency resolution or end-to-end execution is claimed. Dependency versions remain unpinned until a compatible environment can be verified.
